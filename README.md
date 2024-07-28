@@ -11,14 +11,12 @@ PostgreSQL (veya başka bir veritabanı, yapılandırılmışsa)
 Başlarken
 Depoyu Klonlayın
 
-bash
 git clone https://github.com/your-repo/department-employee-microservices.git
 cd department-employee-microservices
 Projeyi Derleyin
 
 Her mikroservis dizinine gidip projeyi Maven ile derleyin:
 
-bash
 cd department-service
 mvn clean install
 
@@ -28,7 +26,6 @@ Mikroservisleri Çalıştırın
 
 Her mikroservisi ayrı ayrı çalıştırabilirsiniz:
 
-bash
 # Departman Servisi için
 cd department-service
 mvn spring-boot:run
@@ -38,7 +35,6 @@ cd ../employee-service
 mvn spring-boot:run
 Alternatif olarak, Docker kullanıyorsanız, imajları oluşturup konteynerleri çalıştırabilirsiniz:
 
-bash
 # Docker imajlarını oluştur
 docker build -t department-service -f department-service/Dockerfile .
 docker build -t employee-service -f employee-service/Dockerfile .
@@ -47,7 +43,7 @@ docker build -t employee-service -f employee-service/Dockerfile .
 docker run -p 8080:8080 department-service
 docker run -p 8081:8081 employee-service
 
-Overview
+# Overview
 This project includes two microservices: Department Service and Employee Service.
 
 Department Service manages departments and their associated employees.
